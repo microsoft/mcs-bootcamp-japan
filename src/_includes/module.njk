@@ -1,0 +1,41 @@
+---
+layout: base.njk
+---
+{% set currentIndex = collections.modules | moduleIndex(page.url) %}
+<main id="main" class="container module-main">
+    <nav class="breadcrumbs" aria-label="現在位置"><a href="{{ '/' | url }}">{{ site.title | escape }}</a><span aria-hidden="true">/</span><span aria-current="page">{{ title | escape }}</span></nav>
+    <header class="module-header">
+      <p class="eyebrow">MODULE {{ currentIndex + 1 }} · {{ kind | escape }}</p>
+      <h1>{{ title | escape }}</h1>
+      <p class="module-description">{{ description | escape }}</p>
+      <dl class="module-facts"><div><dt>全体枠</dt><dd>{{ duration | escape }}</dd></div>{% if labDuration %}<div><dt>Lab・実習</dt><dd>{{ labDuration | escape }}</dd></div>{% endif %}<div><dt>対象者</dt><dd>{{ audience | escape }}</dd></div><div><dt>レベル</dt><dd>{{ level | escape }}</dd></div></dl>
+      {% if sessionPlan %}<p class="muted">進め方：{{ sessionPlan | escape }}</p>{% endif %}
+    </header>
+    <nav class="page-navigation" aria-label="前後のモジュール">
+      {% if currentIndex > 0 %}
+      {% set previous = collections.modules[currentIndex - 1] %}
+      <a href="{{ previous.url | url }}"><small>← 前のモジュール</small><span>{{ previous.data.title | escape }}</span></a>
+      {% else %}
+      <a href="{{ '/' | url }}#agenda"><small>← トップページ</small><span>アジェンダに戻る</span></a>
+      {% endif %}
+      {% if currentIndex < collections.modules.length - 1 %}
+      {% set next = collections.modules[currentIndex + 1] %}
+      <a href="{{ next.url | url }}"><small>次のモジュール →</small><span>{{ next.data.title | escape }}</span></a>
+      {% else %}
+      <a href="{{ '/' | url }}#agenda"><small>すべてのモジュール</small><span>アジェンダに戻る →</span></a>
+      {% endif %}
+    </nav>
+    <details class="module-selector">
+      <summary>モジュール一覧（{{ currentIndex + 1 }} / {{ collections.modules | length }}）</summary>
+      <nav aria-label="モジュール一覧">
+        <ol class="module-menu">
+        {% for module in collections.modules %}
+          <li><a href="{{ module.url | url }}"{% if module.url == page.url %} aria-current="page"{% endif %}><span>{{ loop.index }}</span>{{ module.data.title | escape }}</a></li>
+        {% endfor %}
+        </ol>
+      </nav>
+    </details>
+    {% if site.notice %}<aside class="notice" aria-label="教材の状態">{{ site.notice | escape }}</aside>{% endif %}
+    <article class="prose" aria-label="モジュール本文">{{ content | safe }}</article>
+    <p class="bottom-back"><a href="{{ '/' | url }}#agenda">← アジェンダに戻る</a></p>
+</main>

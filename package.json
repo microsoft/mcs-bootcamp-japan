@@ -1,0 +1,13 @@
+{
+  "name": "copilot-studio-1day",
+  "private": true,
+  "scripts": {
+    "build": "eleventy",
+    "start": "eleventy --serve",
+    "test": "node --test"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.2",
+    "markdown-it": "^14.1.0"
+  }
+}

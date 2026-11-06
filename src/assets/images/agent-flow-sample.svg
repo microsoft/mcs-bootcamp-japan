@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 300" role="img" aria-labelledby="title desc">
+  <title id="title">エージェントの処理の流れ（サンプル図）</title>
+  <desc id="desc">左から入力、エージェント、出力の順に矢印でつながる配置サンプル。実際の製品画面ではありません。</desc>
+  <rect width="960" height="300" rx="16" fill="#f5f8fc"/>
+  <g font-family="Segoe UI, Meiryo, sans-serif" text-anchor="middle">
+    <text x="480" y="46" font-size="22" fill="#303333">エージェントの処理の流れ</text>
+    <rect x="40" y="90" width="230" height="110" rx="12" fill="#eef7fc" stroke="#0078c9" stroke-width="2"/>
+    <rect x="365" y="90" width="230" height="110" rx="12" fill="#f3eefb" stroke="#7841cb" stroke-width="2"/>
+    <rect x="690" y="90" width="230" height="110" rx="12" fill="#eef8f0" stroke="#28804b" stroke-width="2"/>
+    <g fill="#303333" font-size="24">
+      <text x="155" y="135">入力</text>
+      <text x="480" y="135">エージェント</text>
+      <text x="805" y="135">出力</text>
+    </g>
+    <g fill="#595d60" font-size="16">
+      <text x="155" y="170">依頼・演習データ</text>
+      <text x="480" y="170">指示に沿って処理</text>
+      <text x="805" y="170">回答・成果物</text>
+    </g>
+    <text x="480" y="258" font-size="15" fill="#595d60">画像配置のサンプルです。実際の製品画面ではありません。</text>
+  </g>
+  <g fill="#526179">
+    <path d="M285 140h48v-8l18 13-18 13v-8h-48z"/>
+    <path d="M610 140h48v-8l18 13-18 13v-8h-48z"/>
+  </g>
+</svg>
