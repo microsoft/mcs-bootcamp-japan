@@ -1,0 +1,12 @@
+---
+layout: base.njk
+---
+<main id="main" class="container module-main">
+  <nav class="breadcrumbs" aria-label="現在位置"><a href="{{ '/' | url }}">{{ site.title | escape }}</a><span aria-hidden="true">/</span><span aria-current="page">{{ title | escape }}</span></nav>
+  <header class="module-header">
+    <p class="eyebrow">AUTHORING GUIDE</p>
+    <h1>{{ title | escape }}</h1>
+    <p class="module-description">{{ description | escape }}</p>
+  </header>
+  <article class="prose" aria-label="執筆者向けサンプル">{{ content | safe }}</article>
+</main>

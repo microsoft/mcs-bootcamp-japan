@@ -1,0 +1,48 @@
+---
+layout: base.njk
+title: 1Day ハンズオン
+---
+<main id="main">
+  <div class="container">
+  <nav class="breadcrumbs" aria-label="現在位置"><span aria-current="page">1Day ハンズオン</span></nav>
+  <section class="hero">
+    <div class="hero-inner">
+      <h1>Copilot Studio GitHub Copilot ハーネス<br>1Day ハンズオン</h1>
+      <p class="hero-description">学ぶ、つくる、確かめる。<br>エージェントの仕組みを、一日のハンズオンで体験しましょう。</p>
+      <a class="button" href="#agenda">アジェンダを見る <span aria-hidden="true">↓</span></a>
+      <dl class="stats">
+        <div><dt>開催形式</dt><dd>1Day</dd></div>
+        <div><dt>モジュール</dt><dd>{{ collections.modules | length }}</dd></div>
+        <div><dt>教材言語</dt><dd>日本語</dd></div>
+      </dl>
+    </div>
+  </section>
+  </div>
+  <div class="container home-content">
+    {% if site.notice %}<aside class="notice" aria-label="教材の状態">{{ site.notice | escape }}</aside>{% endif %}
+    <section id="agenda" aria-labelledby="agenda-title">
+      <div class="section-heading"><h2 id="agenda-title">アジェンダ</h2><span class="muted">上から順に進めましょう</span></div>
+      <p class="muted">Lab・実習のある基礎①〜⑧を掲載しています。時刻と全体枠は想定アジェンダどおりで、休憩などの非掲載枠があるため時刻に間隔があります。</p>
+      <ol class="agenda-list">
+      {% for module in collections.modules %}
+        <li>
+          <a class="agenda-card" data-kind="{{ module.data.kind | escape }}" href="{{ module.url | url }}">
+            <span class="agenda-time">{% if module.data.startTime %}{{ module.data.startTime | escape }}{% else %}時刻未設定{% endif %}</span>
+            <div class="card-content"><p class="card-meta">{{ module.data.kind | escape }}</p><h3>Module {{ loop.index }}: {{ module.data.title | escape }}</h3><p>{{ module.data.description | escape }}</p></div>
+            <span class="card-badges"><span class="badge level-badge">{{ module.data.level | escape }}</span><span class="badge">全体 {{ module.data.duration | escape }}</span>{% if module.data.labDuration %}<span class="badge">Lab {{ module.data.labDuration | escape }}</span>{% endif %}</span>
+          </a>
+        </li>
+      {% endfor %}
+      </ol>
+    </section>
+    <section class="intro" aria-labelledby="about-title">
+      <h2 id="about-title">このハンズオンについて</h2>
+      <p>各モジュールに学習目標・事前準備・操作手順・まとめを掲載しています。講師と一緒に、またはご自身のペースで進められます。</p>
+    </section>
+    <section class="preparation" aria-labelledby="preparation-title">
+      <h2 id="preparation-title">参加する前に</h2>
+      <p>必要なアカウント・ライセンス・環境・権限は、各モジュールの「前提条件と事前準備」を確認してください。</p>
+      <p class="muted">主催者向け：ここに当日の案内や共通の事前準備へのリンクを追記してください。</p>
+    </section>
+  </div>
+</main>
