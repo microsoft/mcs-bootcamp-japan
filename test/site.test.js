@@ -21,7 +21,7 @@ test("generates an agenda and every module", () => {
 
 test("agenda matches the eight Excel lab blocks and their timings", () => {
   const expected = [
-    ["01-agent-components", "10:15", "70分", "45分"],
+    ["01-agent-components", "10:15", "45分", "30分"],
     ["02-skills", "11:25", "35分", "25分"],
     ["03-knowledge-tools", "13:00", "40分", "20分"],
     ["04-multi-agent", "13:40", "25分", "15分"],
