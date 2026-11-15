@@ -23,8 +23,8 @@ test("agenda matches the eight Excel lab blocks and their timings", () => {
   const expected = [
     ["01-agent-components", "10:15", "45分", "30分"],
     ["02-skills", "11:10", "50分", "40分"],
-    ["03-knowledge-tools", "13:00", "40分", "20分"],
-    ["04-multi-agent", "13:40", "25分", "15分"],
+    ["03-knowledge-tools", "13:00", "50分", "35分"],
+    ["04-multi-agent", "13:50", "15分", null],
     ["05-natural-language", "14:05", "30分", "20分"],
     ["06-evaluation", "14:35", "30分", "20分"],
     ["07-workflows", "15:05", "40分", "25分"],
@@ -38,7 +38,11 @@ test("agenda matches the eight Excel lab blocks and their timings", () => {
     assert.ok(cards[index].includes(`/modules/${slug}/`));
     assert.ok(cards[index].includes(time));
     assert.ok(cards[index].includes(`全体 ${duration}`));
-    assert.ok(cards[index].includes(`Lab ${labDuration}`));
+    if (labDuration) {
+      assert.ok(cards[index].includes(`Lab ${labDuration}`));
+    } else {
+      assert.doesNotMatch(cards[index], /Lab /);
+    }
   });
 });
 
