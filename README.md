@@ -86,6 +86,8 @@ level: 中級
 
 画像は `src/assets/images/` に置き、本文から `../../assets/images/example.png` のような相対パスで参照します。リポジトリ名が付いたGitHub Pagesでも表示できます。画像には内容が分かる代替テキストを付けてください。
 
+各モジュールの参考・配布ファイルは `src/modules/assets/<モジュールのファイル名（拡張子なし）>/` にまとめます。例えばモジュール5の資料は `src/modules/assets/05-natural-language/` に置き、本文から `../assets/05-natural-language/copilot-license-policy.md` のように参照します。このフォルダー内のファイルは教材ページに変換せず、そのまま公開先にコピーされます。
+
 画像・補足欄・コピーアイコン付きコードの記法と表示例は、[執筆者向けサンプル原稿](src/authoring/samples.md) にまとめています。[ローカルの表示サンプル](http://localhost:8080/authoring/samples/) で確認できます。公開先ではサイトURLの末尾に `authoring/samples/` を付けて開きます。受講者向けの8モジュールとは独立しており、アジェンダや前後ナビゲーションには含まれません。
 
 実際の画像は [サンプル図](src/assets/images/agent-flow-sample.svg) です。説明や操作手順の直後に、前後に空行を入れて以下のように記述します。テンプレート直下ではなく、公開用モジュール原稿からの相対パスです。

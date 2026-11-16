@@ -114,7 +114,8 @@ test("Markdown alerts preserve formatting, lists and ordinary quotations", () =>
     setLibrary: (_, library) => { markdown = library; },
     addPassthroughCopy() {},
     addCollection() {},
-    addFilter() {}
+    addFilter() {},
+    ignores: { add() {} }
   });
   const html = markdown.render("> [!TIP]\n> **Hint** and `code`\n>\n> - first\n> - second\n\n> Ordinary quote\n");
   assert.match(html, /class="callout callout-tip"/);
