@@ -6,6 +6,7 @@ kind: 解説
 startTime: "13:50"
 duration: 15分
 sessionPlan: 解説15分（Labなし）
+slides: https://aka.ms/mcsbootcampjp/module4
 ---
 
 ## 概要

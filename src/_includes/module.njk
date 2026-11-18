@@ -10,6 +10,7 @@ layout: base.njk
       <p class="module-description">{{ description | escape }}</p>
       <dl class="module-facts"><div><dt>全体枠</dt><dd>{{ duration | escape }}</dd></div>{% if labDuration %}<div><dt>Lab・実習</dt><dd>{{ labDuration | escape }}</dd></div>{% endif %}<div><dt>対象者</dt><dd>{{ audience | escape }}</dd></div><div><dt>レベル</dt><dd>{{ level | escape }}</dd></div></dl>
       {% if sessionPlan %}<p class="muted">進め方：{{ sessionPlan | escape }}</p>{% endif %}
+      {% if slides %}<p class="module-actions"><a class="slides-button" href="{{ slides | escape }}" target="_blank" rel="noopener"><svg class="slides-icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24" width="18" height="18"><path d="M12 3v12m0 0-5-5m5 5 5-5M4 19h16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>講義資料<span class="visually-hidden">（ダウンロード。新しいタブで開きます）</span></a></p>{% endif %}
     </header>
     <nav class="page-navigation" aria-label="前後のモジュール">
       {% if currentIndex > 0 %}
@@ -35,7 +36,6 @@ layout: base.njk
         </ol>
       </nav>
     </details>
-    {% if site.notice %}<aside class="notice" aria-label="教材の状態">{{ site.notice | escape }}</aside>{% endif %}
     <article class="prose" aria-label="モジュール本文">{{ content | safe }}</article>
     <p class="bottom-back"><a href="{{ '/' | url }}#agenda">← アジェンダに戻る</a></p>
 </main>
