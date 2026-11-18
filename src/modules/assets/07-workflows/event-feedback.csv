@@ -1,0 +1,5 @@
+﻿ListSchema={"schemaXmlList":["<Field ID=\"{fa564e0f-0c70-4ab9-b863-0177e6ddd247}\" Type=\"Text\" Name=\"Title\" DisplayName=\"Title\" StaticName=\"Title\" Required=\"TRUE\" MaxLength=\"255\" FromBaseType=\"TRUE\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" />","<Field ID=\"{b92476a0-f2d4-4833-b1d8-23dbe10aa6b9}\" Type=\"Text\" Name=\"EventName\" DisplayName=\"EventName\" StaticName=\"EventName\" Required=\"TRUE\" MaxLength=\"255\" />","<Field ID=\"{8f231e2b-984c-4bd0-9fc8-d7582f9ef1bd}\" Type=\"Note\" Name=\"Feedback\" DisplayName=\"Feedback\" StaticName=\"Feedback\" Required=\"TRUE\" RichText=\"FALSE\" NumLines=\"6\" />"]}
+"Title","EventName","Feedback"
+"ハンズオン時間の改善","社内 AI 活用イベント","次回はハンズオンの時間を増やしてほしいです。説明を聞いた後に自分で試す時間が足りませんでした。"
+"説明への感想","社内 AI 活用イベント","講師の説明が分かりやすかったです。参加してよかったです。"
+"イベントと無関係な質問","社内 AI 活用イベント","来週の天気を教えてください。"
