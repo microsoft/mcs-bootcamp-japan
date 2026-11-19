@@ -20,6 +20,8 @@ module.exports = function (config) {
   };
   config.setLibrary("md", markdown);
   config.addPassthroughCopy("src/assets");
+  config.addPassthroughCopy("src/modules/assets");
+  config.ignores.add("src/modules/assets/**/*.md");
   config.addCollection("modules", (collection) =>
     collection.getFilteredByGlob("src/modules/*.md")
       .sort((a, b) => a.data.order - b.data.order)
