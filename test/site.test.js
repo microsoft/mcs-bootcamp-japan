@@ -19,7 +19,7 @@ test("generates an agenda and every module", () => {
   assert.doesNotMatch(home, /role="tab"/);
 });
 
-test("agenda matches the eight Excel lab blocks and their timings", () => {
+test("agenda matches the module blocks and their timings", () => {
   const expected = [
     ["01-agent-components", "10:15", "45分", "30分"],
     ["02-skills", "11:10", "50分", "40分"],
@@ -28,7 +28,8 @@ test("agenda matches the eight Excel lab blocks and their timings", () => {
     ["05-natural-language", "14:05", "30分", "20分"],
     ["06-evaluation", "14:35", "30分", "20分"],
     ["07-workflows", "15:05", "40分", "25分"],
-    ["08-cost-monitoring", "15:55", "15分", "5分"]
+    ["08-cost-monitoring", "15:55", "15分", "5分"],
+    ["09-advanced-features", "16:10", "30分", null]
   ];
   assert.deepEqual(sourceModules.slice().sort(), expected.map(([slug]) => `${slug}.md`));
   const home = fs.readFileSync(path.join(output, "index.html"), "utf8");
