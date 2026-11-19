@@ -4,7 +4,6 @@ title: 1Day ハンズオン
 ---
 <main id="main">
   <div class="container">
-  <nav class="breadcrumbs" aria-label="現在位置"><span aria-current="page">1Day ハンズオン</span></nav>
   <section class="hero">
     <div class="hero-inner">
       <h1>Copilot Studio Microsoft Copilotハーネス<br>1Day ハンズオン</h1>
@@ -19,10 +18,8 @@ title: 1Day ハンズオン
   </section>
   </div>
   <div class="container home-content">
-    {% if site.notice %}<aside class="notice" aria-label="教材の状態">{{ site.notice | escape }}</aside>{% endif %}
     <section id="agenda" aria-labelledby="agenda-title">
       <div class="section-heading"><h2 id="agenda-title">アジェンダ</h2><span class="muted">上から順に進めましょう</span></div>
-      <p class="muted">Lab・実習のある基礎①〜⑧を掲載しています。時刻と全体枠は想定アジェンダどおりで、休憩などの非掲載枠があるため時刻に間隔があります。</p>
       <ol class="agenda-list">
       {% for module in collections.modules %}
         <li>
@@ -41,8 +38,7 @@ title: 1Day ハンズオン
     </section>
     <section class="preparation" aria-labelledby="preparation-title">
       <h2 id="preparation-title">参加する前に</h2>
-      <p>必要なアカウント・ライセンス・環境・権限は、各モジュールの「前提条件と事前準備」を確認してください。</p>
-      <p class="muted">主催者向け：ここに当日の案内や共通の事前準備へのリンクを追記してください。</p>
+      <p>このラボは専用のトレーニングテナントで実施することを前提に作られています。アクセス方法は講師の指示に従ってください。</p>
     </section>
   </div>
 </main>

@@ -6,6 +6,7 @@ startTime: "14:35"
 duration: 30分
 labDuration: 20分
 sessionPlan: 講義10分 → 実習20分
+slides: https://aka.ms/mcsbootcampjp/module6
 ---
 
 ## 概要

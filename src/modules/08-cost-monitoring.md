@@ -5,7 +5,8 @@ order: 8
 startTime: "15:55"
 duration: 15分
 labDuration: 5分
-sessionPlan: 講義 10 分 → 評価結果の比較 5 分
+sessionPlan: 講義10分 → Monitorでの確認5分
+slides: https://aka.ms/mcsbootcampjp/module8
 ---
 
 ## 概要
