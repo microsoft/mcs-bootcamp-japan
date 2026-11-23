@@ -72,9 +72,10 @@ zipを展開すると「Day1_配布ファイル」フォルダーができ、次
 | 調査台帳_ぬくもりボトル500_完成見本.xlsx | チャットB・C（予備） |
 | plan-review.zip | 基礎②のSkill② |
 | survey-intake.zip、survey-dashboard.zip | 基礎②のSkill①・Skill③（予備） |
+| BootCampMCP_1_0_0_0.zip | 基礎③のMCPサーバーの取り込み |
 
 > [!TIP]
-> チャットに添付するときは、zipを展開したフォルダーからファイルを選びます。zipのままでは添付できません。基礎②の plan-review.zip などは、展開せずにそのままアップロードします。
+> チャットに添付するときは、zipを展開したフォルダーからファイルを選びます。zipのままでは添付できません。基礎②の plan-review.zip などや、基礎③の BootCampMCP_1_0_0_0.zip は、展開せずにそのまま使います。
 
 [dl-zip]: ../../assets/downloads/day1-handson-files.zip
 
