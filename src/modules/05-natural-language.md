@@ -68,27 +68,27 @@ slides: https://aka.ms/mcsbootcampjp/module5
 
 2. [演習用 SharePoint](https://copilotstudiotraining.sharepoint.com/) を開き、左メニューで**ビルド**をクリックします。
 
-   ![sharepoint_build_menu](../assets/images/module5/sharepoint_build_menu.png)
+   ![sharepoint_build_menu](../../assets/images/module5/sharepoint_build_menu.png)
 
 3. リストをクリックします。
 
-   ![sharepoint_list_menu](../assets/images/module5/sharepoint_list_menu.png)
+   ![sharepoint_list_menu](../../assets/images/module5/sharepoint_list_menu.png)
 
 4. インポート元で **CSV** をクリックします。
 
-   ![sharepoint_list_csv_menu](../assets/images/module5/sharepoint_list_csv_menu.png)
+   ![sharepoint_list_csv_menu](../../assets/images/module5/sharepoint_list_csv_menu.png)
 
 5. ダウンロードした CSV をアップロードし、7 列存在する事を確認し、**次へ**を選択します。`Inquiry`・`TriedActions`・`Summary` は複数行テキスト、`Category` は選択肢です。
 
-   ![sharepoint_list_csv_columns_menu](../assets/images/module5/sharepoint_list_csv_columns_menu.png)
+   ![sharepoint_list_csv_columns_menu](../../assets/images/module5/sharepoint_list_csv_columns_menu.png)
 
 6. 作成先を**マイ リスト**にし、名前を `support-inquiries` として作成します。
 
-   ![sharepoint_list_save_menu](../assets/images/module5/sharepoint_list_save_menu.png)
+   ![sharepoint_list_save_menu](../../assets/images/module5/sharepoint_list_save_menu.png)
 
 7. リストを開き、7 列とサンプル 4 件を確認します。
 
-   ![sharepoint_list_support_inquries](../assets/images/module5/sharepoint_list_support_inquries.png)
+   ![sharepoint_list_support_inquries](../../assets/images/module5/sharepoint_list_support_inquries.png)
 
 8. ブラウザーのアドレスバーで、**リストの完全な URL** をアドレスバーからコピーして控えます。
 
@@ -110,7 +110,7 @@ slides: https://aka.ms/mcsbootcampjp/module5
 
 2. `チャット`メニューより `new chat` をクリックします。
 
-   ![new-chat](../assets/images/module5/new_chat.png)
+   ![new-chat](../../assets/images/module5/new_chat.png)
 
 3. 次の依頼の `[作成したリストの完全な URL]` を、準備で控えた自分のリストの URL に置き換えます。サイトの URL だけではなく、`/Lists/` 以降を含む完全な URL を指定し、ホーム画面の自然言語による作成入力欄に入力して送信します。
 
@@ -140,17 +140,17 @@ slides: https://aka.ms/mcsbootcampjp/module5
 
    ※ 現在のバージョンではファイルをチャットでアップロードすることはできないため、エージェント作成後に別途ナレッジを追加します。
 
-   ![new_chat_building](../assets/images/module5/new_chat_building.png)
+   ![new_chat_building](../../assets/images/module5/new_chat_building.png)
 
 ### Step 2: 生成された構成を確認し、作成チャットで修正する
 
 1. 作成の完了を待ち、生成されたエージェントを別のタブで開きます。
 
-   ![agents](../assets/images/module5/agents.png)
+   ![agents](../../assets/images/module5/agents.png)
 
 2. モデルで `Claude Sonnet 5.5` が指定されているか確認します。異なるモデルが設定されている場合、モデルを `Claude Sonnet 5.5` に変更します。
 
-   ![model-selection](../assets/images/module5/model_selection.png)
+   ![model-selection](../../assets/images/module5/model_selection.png)
 
 3. 「作成」タブで指示・ナレッジ・スキル・ツールを確認します。「M365 Copilot ヘルプデスク」またはそれに相当する名前のエージェントが日本語で対応する構成になり、外部 Web ナレッジと 3 つのスキル、SharePoint リストにアイテムを追加できるツールが追加されていることを確認します。
 
@@ -168,7 +168,7 @@ slides: https://aka.ms/mcsbootcampjp/module5
 
 4. チャットで指示通りエージェントが作成された場合、問い合わせ登録は`スキル`ではなく`指示`になるため、チャットでスキル化を依頼します。もし既にスキルが 4 つある場合は内容だけ確認します。
 
-   ![initial-skills](../assets/images/module5/initial-skills.png)
+   ![initial-skills](../../assets/images/module5/initial-skills.png)
 
    ```text
    解決しない相談のエスカレーションの内容をスキルにして。
@@ -176,17 +176,17 @@ slides: https://aka.ms/mcsbootcampjp/module5
 
 5. チャットでスキルが追加されたことを確認します。
 
-   ![chat_escalation_skill](../assets/images/module5/chat_escalation_skill.png)
+   ![chat_escalation_skill](../../assets/images/module5/chat_escalation_skill.png)
 
 6. エージェントの画面で更新してスキルが追加されていることを確認します。
 
-   ![agent_escalation_skill](../assets/images/module5/agent_escalation_skill.png)
+   ![agent_escalation_skill](../../assets/images/module5/agent_escalation_skill.png)
 
 #### SharePoint の登録先と列の対応を確認する
 
 問い合わせ登録を行うスキルを開き、指示に指定された登録先が、準備で控えて作成チャットに渡したリストの完全な URL と一致し、自分のマイ リストに作成したリストになっていることを確認します。サイトの URL とリスト名が別々に指定されている場合は、同じリストを指していることを確認します。各列の対応と初期値が依頼どおりであることも確認します。ツールの種類を固定せず、スキルからリストアイテムを追加できるツールを利用する構成になっているかを確認し、未設定・意図と異なる場合だけ、作成チャットで修正を依頼します。
 
-![escalation_skill_detail](../assets/images/module5/escalation_skill_detail.png)
+![escalation_skill_detail](../../assets/images/module5/escalation_skill_detail.png)
 
 #### ナレッジ URL の問題を見つける
 
@@ -198,7 +198,7 @@ slides: https://aka.ms/mcsbootcampjp/module5
 | Microsoft Learn - Microsoft 365  | `https://learn.microsoft.com/ja-jp/microsoft-365` |
 | Microsoft Support - Microsoft 365  | `https://support.microsoft.com/ja-jp/microsoft-365` |
 
-![knowledge_web_1](../assets/images/module5/knowledge_web_1.png)
+![knowledge_web_1](../../assets/images/module5/knowledge_web_1.png)
 
 > [!WARNING]
 > 作成チャットでエージェントを更新した場合は、別タブで開いているエージェントの画面を一度再読み込みしてください。
@@ -209,27 +209,27 @@ slides: https://aka.ms/mcsbootcampjp/module5
 
 1. エージェントを開き、**作成**タブで**ナレッジ**の **［＋］** を選択します。
 
-   ![add_knowledge](../assets/images/module5/add_knowledge.png)
+   ![add_knowledge](../../assets/images/module5/add_knowledge.png)
 
 2. `ドラッグ アンド ドロップ、またはクリックしてアップロード` をクリックして [copilot-license-policy.pdf](../assets/05-natural-language/copilot-license-policy.pdf) をアップロードします。
 
-   ![upload_knowledge](../assets/images/module5/upload_knowledge.png)
+   ![upload_knowledge](../../assets/images/module5/upload_knowledge.png)
 
 3. **エージェントに追加する**を選択します。
 
-   ![add_knowledge_to_agent](../assets/images/module5/add_knowledge_to_agent.png)
+   ![add_knowledge_to_agent](../../assets/images/module5/add_knowledge_to_agent.png)
 
 4. 追加されたナレッジを開き、名前に「Microsoft 365 Copilot 利用・ライセンス申請ガイド」、説明に「社内情報：Microsoft 365 Copilot 利用・ライセンス申請ガイド」と入力して、**保存**を選択します。
 
-   ![update_knowledge_source](../assets/images/module5/update_knowledge_source.png)
+   ![update_knowledge_source](../../assets/images/module5/update_knowledge_source.png)
 
 5. エージェントの**保存**ボタンを選択して変更を保存します。
 
-   ![save_agent](../assets/images/module5/save_agent.png)
+   ![save_agent](../../assets/images/module5/save_agent.png)
 
 6. ライセンス案内スキルの内容を確認し、申請ガイドが使われるように指示がされているか確認します。
 
-   ![skill_license_guide](../assets/images/module5/skill_license_guide.png)
+   ![skill_license_guide](../../assets/images/module5/skill_license_guide.png)
 
    もし指示が不足している場合、作成チャットに戻り、ライセンス案内のスキルの更新を依頼します。
 
@@ -237,7 +237,7 @@ slides: https://aka.ms/mcsbootcampjp/module5
    ナレッジとして「Microsoft 365 Copilot 利用・ライセンス申請ガイド」を追加したので、ライセンスガイドスキルを更新してください。
    ```
 
-   ![skill_license_guide_update](../assets/images/module5/skill_license_guide_update.png)
+   ![skill_license_guide_update](../../assets/images/module5/skill_license_guide_update.png)
 
 7. 処理が完了したら、エージェントの画面を一度再読み込みし、スキルに社内ガイドを参照する指示が反映されていることを確認します。
 
@@ -245,7 +245,7 @@ slides: https://aka.ms/mcsbootcampjp/module5
 
 1. 内容が確認できたら、エージェントを保存し、**プレビュー** を開きます。
 
-   ![preview](../assets/images/module5/preview.png)
+   ![preview](../../assets/images/module5/preview.png)
 
 2. 次の表の 5 件を試します。各ケースは新しい会話で開始してください。
 
@@ -259,7 +259,7 @@ slides: https://aka.ms/mcsbootcampjp/module5
 
    出典はリンクや参照資料を開き、回答の内容を実際に裏付けていることを確認します。プレビューのアクティビティトレースでスキルの呼び出しや実行内容を確認します。
 
-   ![chat_result1](../assets/images/module5/chat_result1.png)
+   ![chat_result1](../../assets/images/module5/chat_result1.png)
 
 意図した動作にならない場合は、次の流れで改善します。
 

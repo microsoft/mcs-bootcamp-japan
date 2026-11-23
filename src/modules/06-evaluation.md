@@ -104,17 +104,17 @@ slides: https://aka.ms/mcsbootcampjp/module6
 
 1. エージェントを保存し、画面上部の **評価** タブを開きます。画面中央の **最初の評価を作成** を選択します。既存の評価がある場合は、右上の**新しい評価**を選択します。
 
-   ![評価タブの初期画面。中央に「最初の評価を作成」が表示されている](../assets/images/module6/evaluation_start.png)
+   ![評価タブの初期画面。中央に「最初の評価を作成」が表示されている](../../assets/images/module6/evaluation_start.png)
 
 2. **データの種類を選択 → 単一の応答** を選び、**インポート**に切り替えます。
 
 3. [EvaluationTemplate.csv](../assets/06-evaluation/EvaluationTemplate.csv) を自分の PC に保存します。Copilot Studio の画面下部にある**またはファイルをアップロード**の青い点線枠を探し、枠内の「CSV ファイルをドラッグするか **参照**」の青文字の**参照**をクリックします。ファイル選択画面で、保存した `EvaluationTemplate.csv` を選び、**開く**を選択して取り込みます。
 
-   ![インポート画面。画面下部の「またはファイルをアップロード」にある青い点線枠内の、青文字の「参照」をクリックする](../assets/images/module6/single_import.png)
+   ![インポート画面。画面下部の「またはファイルをアップロード」にある青い点線枠内の、青文字の「参照」をクリックする](../../assets/images/module6/single_import.png)
 
 4. 画面上部の**評価名を入力**に `06-baseline` と入力し、一覧下部が `1–4 of 11` になっていることを確認します。期待応答は、後の手順で「意味を比較する」を追加すると表示されます。
 
-   ![一問一答11件の取り込み結果。評価名と、一覧下部の全11件という件数を確認する](../assets/images/module6/single_dataset.png)
+   ![一問一答11件の取り込み結果。評価名と、一覧下部の全11件という件数を確認する](../../assets/images/module6/single_dataset.png)
 
 5. **テストメソッドを追加・設定する：**「意味を比較する」と「能力の使用」を 1 つずつ追加し、それぞれの設定を行います。
 
@@ -122,25 +122,25 @@ slides: https://aka.ms/mcsbootcampjp/module6
 
    **b.** **意味を比較する**を選択し、**OK** を選択します。**合格点の設定**が開いたら、`50/100` であることを確認して **OK** を選択します。この教材では、このメソッドを「意味の比較」と呼びます。合格点は全ケースに同じ値を使い、再評価でも変更しません。
 
-   ![テストメソッドの選択画面。「意味を比較する」を選択して OK で追加する](../assets/images/module6/compare_meaning_selection.png)
+   ![テストメソッドの選択画面。「意味を比較する」を選択して OK で追加する](../../assets/images/module6/compare_meaning_selection.png)
 
-   ![追加時に開く合格点の設定。50/100であることを確認して OK を選択する](../assets/images/module6/compare_meaning_score.png)
+   ![追加時に開く合格点の設定。50/100であることを確認して OK を選択する](../../assets/images/module6/compare_meaning_score.png)
 
    **c.** データセットの**想定される応答**列に CSV の `expectedResponse` の内容が表示されていることを確認します。一覧下部の **2**・**3** でページを切り替えて 11 件すべてを確認し、修正が必要な場合だけ、そのセルを選択して編集します。
 
-   ![意味の比較を追加した直後の一覧。質問の右に「想定される応答」列が表示され、CSVの期待応答が読み込まれている](../assets/images/module6/single_expected_responses.png)
+   ![意味の比較を追加した直後の一覧。質問の右に「想定される応答」列が表示され、CSVの期待応答が読み込まれている](../../assets/images/module6/single_expected_responses.png)
 
    **d.** もう一度**テスト メソッドの追加**を開き、**能力の使用 → OK** の順に選択します。合格スコアの数値設定は不要です。続けて各ケースで使用してほしい能力を指定します。
 
-   ![テストメソッドの選択画面。「能力の使用」を選択して OK で追加する](../assets/images/module6/test_method_selection.png)
+   ![テストメソッドの選択画面。「能力の使用」を選択して OK で追加する](../../assets/images/module6/test_method_selection.png)
 
    **e.** 一覧下部の **1** で先頭ページに戻り、ケース 1「Microsoft 365 Copilot では、どのような業務を支援できますか？」の行の、一番右にある **ツール** 欄の空欄セル（下図の赤枠）をクリックします。**能力の選択**が開きます。質問や想定される応答のセル、列見出しの編集アイコンではなく、ケース 1 のツール欄を選択します。
 
-   ![能力を指定する前の一覧。ケース1の行の一番右にある「ツール」欄の空欄セルを赤枠で示している](../assets/images/module6/single_tool_cell.png)
+   ![能力を指定する前の一覧。ケース1の行の一番右にある「ツール」欄の空欄セルを赤枠で示している](../../assets/images/module6/single_tool_cell.png)
 
    **f.** 開いた**能力の選択**で、モジュール 5 で作成した**製品ガイドのスキルに対応する項目だけ**にチェックを入れます。画面例では `product-guidance` です。スキルも種類が「ツール」と表示されるため、事前に確認したスキル名で選びます。
 
-   ![能力の選択。製品案内を担当する product-guidance のみにチェックを入れる](../assets/images/module6/product_skill_selection.png)
+   ![能力の選択。製品案内を担当する product-guidance のみにチェックを入れる](../../assets/images/module6/product_skill_selection.png)
 
    **g.** **OK**で閉じ、ケースのツール欄に選択した名前が表示されたことを確認します。
 
@@ -148,7 +148,7 @@ slides: https://aka.ms/mcsbootcampjp/module6
 
    **i.** 次に、ケース 6「自分に Microsoft 365 Copilot のライセンスが割り当てられているか分かりますか？」の**ツール欄 → ライセンスガイドに対応する項目を選択 → OK**の順に設定します。製品ガイドではなくライセンスガイドの名前が表示されていることを確認します。
 
-   ![ライセンス案内の能力の選択。license-guidance のみにチェックを入れる](../assets/images/module6/license_skill_selection.png)
+   ![ライセンス案内の能力の選択。license-guidance のみにチェックを入れる](../../assets/images/module6/license_skill_selection.png)
 
    **j.** ケース 7～11 も同じようにライセンスガイドを指定して **OK** で確定します。各ページのツール欄が下表の設定になっていることを確認します。
 
@@ -159,17 +159,17 @@ slides: https://aka.ms/mcsbootcampjp/module6
 
    能力の列見出しにある編集アイコンは、全ケースに同じ能力を設定する操作です。今回はケースごとに担当するスキルが異なるため、使いません。
 
-   ![2ページ目のケース5～8の設定例。ケース5は product-guidance、ケース6～8は license-guidance が表示されている](../assets/images/module6/single_configured.png)
+   ![2ページ目のケース5～8の設定例。ケース5は product-guidance、ケース6～8は license-guidance が表示されている](../../assets/images/module6/single_configured.png)
 
    **k.** 追加した 2 つのメソッドが一覧に表示されていることを確認します。この実習では、画面例と同じく既定の**全般的な品質**も残します。
 
-   ![追加後のテスト方法一覧。「意味を比較する」と「能力の使用」が表示されている。画面例では既定の「全般的な品質」も残している](../assets/images/module6/test_methods_configured.png)
+   ![追加後のテスト方法一覧。「意味を比較する」と「能力の使用」が表示されている。画面例では既定の「全般的な品質」も残している](../../assets/images/module6/test_methods_configured.png)
 
 6. 保存前に、**名前が `06-baseline`、意味の比較が 50 点、各ケースの期待応答と期待する能力が設定済み**であることを確認し、**保存**を選択します。保存が完了したら、Copilot クレジットを使用することを確認して**実行**を選択します。
 
    **プロファイルと接続の管理**が開いたら、自分の演習用アカウントと接続を確認して**実行**を選択します。「これらの設定を、自分が行うすべての評価で使用する」は、この実習では選択しなくても構いません。
 
-   ![プロファイルと接続の管理。実行するユーザーと接続を確認し、実行を選択する](../assets/images/module6/run_profile.png)
+   ![プロファイルと接続の管理。実行するユーザーと接続を確認し、実行を選択する](../../assets/images/module6/run_profile.png)
 
    別の評価が実行中の場合は、完了するまで次の**実行**が無効になります。待っている間に、Step 2 の会話データセットの取り込み・設定・保存を進められます。
 
@@ -177,47 +177,47 @@ slides: https://aka.ms/mcsbootcampjp/module6
 
 評価のトップページで `06-baseline` を開き、**結果**タブの実行履歴から、状態が**完了**の行を選択します。件数、メソッド別の判定、所要時間、使用したクレジットを確認します。実行エラーと、回答品質の失敗を区別します。
 
-![一問一答の実行結果。所要時間・使用したクレジット・テスト件数と、テストメソッド別の判定を確認する](../assets/images/module6/single_results.png)
+![一問一答の実行結果。所要時間・使用したクレジット・テスト件数と、テストメソッド別の判定を確認する](../../assets/images/module6/single_results.png)
 
 各ケースの**意味の比較**と**能力の使用**を別々に確認します。設定不足による無効・未評価は、Pass や回答品質の Fail と区別します。
 
 一覧のケースを選択すると**データセットの詳細**が開きます。中央の実際の応答と、右側の**想定される応答**・メソッドごとの判定を比較します。意味の比較では、合否だけでなく点数と理由も確認します。**能力の使用**では、期待したスキルが使われたかを確認します。左側の質問一覧から次のケースへ移動できます。
 
-![一問一答の結果詳細。実際の応答、使用されたスキル、意味の比較の点数と理由、想定される応答を確認する](../assets/images/module6/single_result_detail.png)
+![一問一答の結果詳細。実際の応答、使用されたスキル、意味の比較の点数と理由、想定される応答を確認する](../../assets/images/module6/single_result_detail.png)
 
 ### Step 2: トラブルシューティングとエスカレーションの会話 3 件を評価する
 
 1. 結果の詳細を開いている場合は右上の **×** で閉じ、画面左上の**戻る**（左向き矢印）で評価の一覧が表示されるまで戻ります。**新しい評価 → インポート**の順に選択して、データの種類を**会話**にします。[EvaluationConversations.csv](../assets/06-evaluation/EvaluationConversations.csv) を PC に保存し、画面下部の青い点線枠内の**参照**をクリックして、保存したファイルを選択して取り込みます。
 
-   ![会話形式のインポート画面。データの種類が「会話」であることを確認してCSVを取り込む](../assets/images/module6/conversation_import.png)
+   ![会話形式のインポート画面。データの種類が「会話」であることを確認してCSVを取り込む](../../assets/images/module6/conversation_import.png)
 
 2. 画面上部の**評価名を入力**に `06-conversation-baseline` と入力し、**3 会話・各 3 組の質問と期待応答**になっていることを確認します。9 件の独立した一問一答として取り込まれた場合は、データの種類を確認して取り込み直します。
 
    一覧の**メッセージ数合計**は、質問と期待応答をそれぞれ数えるため、各会話で `6` と表示されます。会話の先頭メッセージを選択して**レビューと編集**を開き、質問と**参照**の 3 組があることを確認します。「参照」は CSV の `response` に入れた期待応答です。内容を変えない場合は**閉じる**で戻ります。
 
-   ![会話CSVの取り込み結果。3会話が並び、メッセージ数合計はそれぞれ6になっている](../assets/images/module6/conversation_dataset.png)
+   ![会話CSVの取り込み結果。3会話が並び、メッセージ数合計はそれぞれ6になっている](../../assets/images/module6/conversation_dataset.png)
 
-   ![会話のレビューと編集。質問と参照応答の組があり、下部に3/6件と表示されている](../assets/images/module6/conversation_turns.png)
+   ![会話のレビューと編集。質問と参照応答の組があり、下部に3/6件と表示されている](../../assets/images/module6/conversation_turns.png)
 
 3. **能力の使用を追加・設定する：** 次の順でメソッドを追加し、会話ごとの担当スキルを指定します。
 
    **a.** 一覧の下の**テスト メソッドの追加 → 能力の使用 → OK** の順に選択します。会話では「意味を比較する」は選択肢にありません。既定の**全般的な品質**は Step 1 と同じく残します。
 
-   ![会話のテストメソッド選択。「意味を比較する」はなく、「能力の使用」を選択する](../assets/images/module6/conversation_methods.png)
+   ![会話のテストメソッド選択。「意味を比較する」はなく、「能力の使用」を選択する](../../assets/images/module6/conversation_methods.png)
 
    **b.** 一覧の先頭にある、サインインの質問の行（CSV の**会話番号 1**）の**ツール**欄の空欄セル（下図の赤枠）をクリックします。画面には会話番号ではなく、各会話の最初の質問が表示されています。
 
-   ![能力の使用を追加した直後の会話一覧。先頭のサインインの会話の「ツール」欄を赤枠で示している](../assets/images/module6/conversation_tool_cell.png)
+   ![能力の使用を追加した直後の会話一覧。先頭のサインインの会話の「ツール」欄を赤枠で示している](../../assets/images/module6/conversation_tool_cell.png)
 
    **c.** **能力の選択**で、事前に確認した**トラブルシューティングのスキルに対応する項目だけ**にチェックを入れます。画面例では `troubleshooting` です。
 
-   ![サインインの会話の能力選択。troubleshooting のみにチェックを入れる](../assets/images/module6/troubleshooting_skill_selection.png)
+   ![サインインの会話の能力選択。troubleshooting のみにチェックを入れる](../../assets/images/module6/troubleshooting_skill_selection.png)
 
    **d.** **OK**で確定し、ツール欄に選択した名前が表示されたことを確認します。
 
    **e.** 2 行目の Windows の Word の会話と、3 行目の Edge の Word の会話（CSV の**会話番号 2・3**）も、それぞれツール欄を編集します。**エスカレーションを担当するスキルだけ**を選択して **OK** で確定します。画面例では `escalation-support-inquiry` です。
 
-   ![エスカレーションの能力選択。登録用ツールではなく escalation-support-inquiry のスキルを選択する](../assets/images/module6/escalation_skill_selection.png)
+   ![エスカレーションの能力選択。登録用ツールではなく escalation-support-inquiry のスキルを選択する](../../assets/images/module6/escalation_skill_selection.png)
 
    **f.** 3 行のツール欄が下表の設定になっていることを確認します。**問い合わせ登録**など、実際に登録するツールは期待する能力に指定しません。
 
@@ -229,30 +229,30 @@ slides: https://aka.ms/mcsbootcampjp/module6
 
    エスカレーション専用のスキルがない場合は、登録内容の整理・訂正・辞退への対応がどのスキルに含まれるかを確認し、そのスキルを会話 2・3 に指定します。トラブルシューティングのスキル内に含まれていれば、結果として同じスキルになります。全会話へ同じスキルを一括設定するのではなく、担当する処理を確認して選びます。
 
-   ![会話ごとの能力設定。サインインの会話には troubleshooting、残り2会話には escalation-support-inquiry を指定している](../assets/images/module6/conversation_configured.png)
+   ![会話ごとの能力設定。サインインの会話には troubleshooting、残り2会話には escalation-support-inquiry を指定している](../../assets/images/module6/conversation_configured.png)
 
 4. **保存・実行する：** 名前、3 会話の構成、能力の使用と期待するスキルの設定を確認して**保存**します。保存が完了したら、Step 1 と同じく演習用アカウント・接続とクレジットの使用を確認して**実行**を選択します。
 5. **結果を確認する：** 評価のトップページで `06-conversation-baseline` を開き、**結果**タブの実行履歴から、状態が**完了**の行を選択します。
 
    完了した実行を開くと、3 会話それぞれの判定を確認できます。
 
-   ![会話3件の実行結果。全般的な品質と能力の使用の判定を会話ごとに確認する](../assets/images/module6/conversation_results.png)
+   ![会話3件の実行結果。全般的な品質と能力の使用の判定を会話ごとに確認する](../../assets/images/module6/conversation_results.png)
 
    一覧の会話を選択すると**会話の詳細**が開きます。中央の会話をスクロールして、最初の応答だけでなく 3 ターンすべてを CSV の期待応答と比較します。右側では**能力の使用**の判定と使用したスキルを確認します。会話 1 では、必要な状況を確認し、秘密情報を求めず、解決の報告を受けて案内を終了しているかを確認します。
 
-   ![会話の結果詳細。中央で実際のやり取りを読み、右側で使用したスキルを確認する](../assets/images/module6/conversation_result_detail.png)
+   ![会話の結果詳細。中央で実際のやり取りを読み、右側で使用したスキルを確認する](../../assets/images/module6/conversation_result_detail.png)
 
    会話 2 では、最後の応答まで移動し、訂正後の件名と `Product`・`Inquiry`・`TriedActions` が引き継がれているか、`Category`・`Summary`・`AssignedTeam` が指定どおりかを確認します。登録完了や受付番号を作っていないことも確認します。会話 3 も同様に、登録辞退後の応答を確認します。回答上の「登録していない」という記述だけで判断せず、使用したツールの情報も確認します。
 
-   ![会話2の最後の応答。件名の訂正と登録予定の全項目が引き継がれ、登録は実行していないと案内されている](../assets/images/module6/conversation_corrected_fields.png)
+   ![会話2の最後の応答。件名の訂正と登録予定の全項目が引き継がれ、登録は実行していないと案内されている](../../assets/images/module6/conversation_corrected_fields.png)
 
-   ![会話3の登録辞退後の応答。登録せず、担当者へ伝える状況と試した対処をまとめている](../assets/images/module6/conversation_declined.png)
+   ![会話3の登録辞退後の応答。登録せず、担当者へ伝える状況と試した対処をまとめている](../../assets/images/module6/conversation_declined.png)
 
 ### Step 3: AI 生成の条件と手動入力によるデータセット作成を確認する
 
 1. 結果の詳細を右上の **×** で閉じ、左上の**戻る**で評価の一覧へ戻って**新しい評価**を選択します。**生成**タブでデータの種類を**単一の応答**にし、**すべての生成オプションを表示**をオンにして、生成する質問の数と**ソースの選択**を確認します。
 
-   ![生成オプション。質問数とソースの選択が表示され、この例ではサポートされているソースが見つからない](../assets/images/module6/generation_options.png)
+   ![生成オプション。質問数とソースの選択が表示され、この例ではサポートされているソースが見つからない](../../assets/images/module6/generation_options.png)
 
 2. 利用できるソースがある場合は、対象と質問数を確認して**データセットを生成**を選択します。生成結果の言語・質問の妥当性を確認し、期待応答が空欄なら補います。
 
@@ -260,11 +260,11 @@ slides: https://aka.ms/mcsbootcampjp/module6
 
 3. 作成方法を選ぶ画面で、**生成**・**インポート**の右にある**または、自分自身で質問を書きます**（下図の赤枠）を選択します。生成結果の画面に進んでいる場合は、評価のトップページから**新しい評価**を開き直します。評価名を `06-additional-check` とし、一覧の**質問**セルに追加で確認したい質問を入力します。
 
-   ![手動入力の開始位置。「生成」「インポート」の右にある「または、自分自身で質問を書きます」を赤枠で示している](../assets/images/module6/manual_entry.png)
+   ![手動入力の開始位置。「生成」「インポート」の右にある「または、自分自身で質問を書きます」を赤枠で示している](../../assets/images/module6/manual_entry.png)
 
 4. **テスト メソッドの追加 → 意味を比較する → OK**で、合格点を `50` に設定します。表示された**想定される応答**セルを選択して期待応答を入力します。質問を増やす場合は一覧右上の**追加**を使います。
 
-   ![手動入力で質問と想定される応答を設定した例。「意味を比較する」を追加すると期待応答の列が表示される](../assets/images/module6/manual_dataset.png)
+   ![手動入力で質問と想定される応答を設定した例。「意味を比較する」を追加すると期待応答の列が表示される](../../assets/images/module6/manual_dataset.png)
 
 5. 入力方法の確認だけなら、保存・実行せず、画面左上の**戻る**で一覧に戻ります。継続して使う場合は**保存**します。実行する場合は、Step 1 と同様に**能力の使用**とケースごとの担当スキルも設定し、接続とクレジットの使用を確認します。既存のベースラインとは別の評価として扱います。
 
@@ -280,7 +280,7 @@ slides: https://aka.ms/mcsbootcampjp/module6
 
    評価トップから対象の評価を開くと、**結果**タブに実行日時ごとの履歴が表示されます。**構成**タブでデータセットとテスト方法が変わっていないことを確認し、右上の**実行**で再評価します。実行結果の詳細画面からは**もう一度実行**も使えます。他の評価が実行中の場合は完了を待ちます。
 
-   ![評価の結果タブ。日時ごとの実行履歴、状態、集計スコア、使用したクレジットを確認できる](../assets/images/module6/evaluation_history.png)
+   ![評価の結果タブ。日時ごとの実行履歴、状態、集計スコア、使用したクレジットを確認できる](../../assets/images/module6/evaluation_history.png)
 
    Step 1・2 で記録したメソッド別の判定と、会話の内容を修正前後で比較します。
 
