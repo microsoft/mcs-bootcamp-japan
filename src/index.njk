@@ -26,7 +26,7 @@ title: 1Day ハンズオン
           <a class="agenda-card" data-kind="{{ module.data.kind | escape }}" href="{{ module.url | url }}">
             <span class="agenda-time">{% if module.data.startTime %}{{ module.data.startTime | escape }}{% else %}時刻未設定{% endif %}</span>
             <div class="card-content"><p class="card-meta">{{ module.data.kind | escape }}</p><h3>Module {{ loop.index }}: {{ module.data.title | escape }}</h3><p>{{ module.data.description | escape }}</p></div>
-            <span class="card-badges"><span class="badge level-badge">{{ module.data.level | escape }}</span><span class="badge">全体 {{ module.data.duration | escape }}</span>{% if module.data.labDuration %}<span class="badge">Lab {{ module.data.labDuration | escape }}</span>{% endif %}</span>
+            <span class="card-badges"><span class="badge">全体 {{ module.data.duration | escape }}</span>{% if module.data.labDuration %}<span class="badge">Lab {{ module.data.labDuration | escape }}</span>{% endif %}</span>
           </a>
         </li>
       {% endfor %}
