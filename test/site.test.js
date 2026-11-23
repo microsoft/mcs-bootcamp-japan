@@ -118,6 +118,22 @@ test("authoring page renders samples independently of the lab agenda", () => {
   assert.doesNotMatch(firstModule, /agent-flow-sample|sample_values|補足欄・コードスニペット/);
 });
 
+test("natural-language lab keeps numbered steps together around images, tables and prompts", () => {
+  const html = fs.readFileSync(path.join(output, "modules", "05-natural-language", "index.html"), "utf8");
+  const article = html.match(/<article class="prose"[^>]*>([\s\S]*?)<\/article>/);
+  assert.ok(article);
+  const lists = [...article[1].matchAll(/<ol\b[^>]*>([\s\S]*?)<\/ol>/g)];
+  assert.deepEqual(lists.map(([, content]) => (content.match(/<li>/g) || []).length),
+    [4, 8, 3, 6, 7, 2, 3]);
+  assert.match(lists[2][1], /<pre><code class="language-text">/);
+  assert.match(lists[3][1], /<table>/);
+  assert.match(lists[4][1], /<pre><code class="language-text">/);
+  assert.match(lists[5][1], /<table>/);
+  for (const index of [1, 2, 3, 4, 5]) {
+    assert.match(lists[index][1], /<img /);
+  }
+});
+
 test("Markdown alerts preserve formatting, lists and ordinary quotations", () => {
   let markdown;
   require("../.eleventy.js")({
