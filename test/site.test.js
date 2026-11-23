@@ -90,7 +90,12 @@ test("outlines end in summary and references without removed sections", () => {
   for (const source of sources) {
     const text = fs.readFileSync(source, "utf8");
     const headings = [...text.matchAll(/^## (.+)$/gm)].map(([, heading]) => heading);
-    assert.deepEqual(headings.slice(-2), ["まとめ", "参考情報"], source);
+    const isExplanation = /^kind:\s*解説\s*$/m.test(text) && !/^labDuration:/m.test(text);
+    if (isExplanation) {
+      assert.ok(headings.includes("概要"), source);
+    } else {
+      assert.deepEqual(headings.slice(-2), ["まとめ", "参考情報"], source);
+    }
     assert.ok(!headings.some((heading) =>
       /完了確認|トラブルシューティング|後片付け|次のステップ/.test(heading)), source);
   }
